@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="img/icons//safari-pinned-tab.svg" color="#E6A93F">
+    <meta name="msapplication-TileColor" content="#e6a93f">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js" defer></script>
+    <title>Music Player - музыка для вас</title>
+</head>
+
+<body>
+    <!-- header start -->
+    <header class="header">
+        <h1 class="visually-hidden">Music Player - музыка для вас!</h1>
+
+        <div class="header__container">
+            <img class="header__logo" src="img/LOGO.svg" alt="Logo">
+
+            <form class="header__search search">
+                <input class="search__input" type="search" name="search">
+                <button class="search__btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3C5.91 3 3 5.91 3 9.5C3 13.09 5.91 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z" />
+                    </svg>
+                </button>
+            </form>
+
+            <button class="header__favorit-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.42 4.42 3 7.5 3C9.24 3 10.91 3.81 12 5.09C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.42 22 8.5C22 12.28 18.6 15.36 13.45 20.04L12 21.35Z" />
+                </svg>
+            </button>
+        </div>
+    </header>
+    <!-- header end -->
+
+    <!-- catalog start -->
+    <section class="catalog">
+        <h2 class="visually-hidden">Список треков</h2>
+
+        <div class="catalog__container">
+            <button class="catalog__item track" data-track="audio/The Weeknd - Save Your Tears.mp3">
+                <div class="track__img-wrap">
+                    <img class="track__poster" src="img/Foto_1.jpg" alt="The weeknd - Save your tears" width="180"
+                        height="180">
+                </div>
+                <div class="track__info track-info">
+                    <p class="track__info__title">
+                        Save your tears
+                    </p>
+                    <p class="track__info__artist">
+                        The weeknd
+                    </p>
+                </div>
+            </button>
+
+            <button class="catalog__item track" data-track="audio/Imagine Dragons - Follow You.mp3">
+                <div class="track__img-wrap">
+                    <img class="track__poster" src="img/Foto_2.jpg" alt="Follow You - Imagine Dragons" width="180"
+                        height="180">
+                </div>
+                <div class="track__info track-info">
+                    <p class="track__info__title">
+                        Follow You
+                    </p>
+                    <p class="track__info__artist">
+                        Imagine Dragons
+                    </p>
+                </div>
+            </button>
+
+            <button class="catalog__item track" data-track="audio/Tove Lo - How Long.mp3">
+                <div class="track__img-wrap">
+                    <img class="track__poster" src="img/Foto_3.jpg" alt="Tove Lo -  How Long" width="180" height="180">
+                </div>
+                <div class="track__info track-info">
+                    <p class="track__info__title">
+                        Tove Lo
+                    </p>
+                    <p class="track__info__artist">
+                        How Long
+                    </p>
+                </div>
+            </button>
+
+            <button class="catalog__item track" data-track="audio/Tom Odell - Another Love.mp3">
+                <div class="track__img-wrap">
+                    <img class="track__poster" src="img/Foto_4.jpg" alt="Another Love - Tom Odell" width="180"
+                        height="180">
+                </div>
+                <div class="track__info track-info">
+                    <p class="track__info__title">
+                        Another Love
+                    </p>
+                    <p class="track__info__artist">
+                        Tom Odell
+                    </p>
+                </div>
+            </button>
+
+            <button class="catalog__item track " data-track="audio/Lana Del Rey - Born To Die.mp3">
+                <div class="track__img-wrap">
+                    <img class="track__poster" src="img/Foto_5.jpg" alt="Born to Die - Lana Del Rey" width="180"
+                        height="180">
+                </div>
+                <div class="track__info track-info">
+                    <p class="track__info__title">
+                        Born to Die
+                    </p>
+                    <p class="track__info__artist">
+                        Lana Del Rey
+                    </p>
+                </div>
+            </button>
+
+            <button class="catalog__item track " data-track="audio/Adele - Hello.mp3">
+                <div class="track__img-wrap">
+                    <img class="track__poster" src="img/Foto_6.jpg" alt="Hello - Adele" width="180" height="180">
+                </div>
+                <div class="track__info track-info">
+                    <p class="track__info__title">
+                        Hello
+                    </p>
+                    <p class="track__info__artist">
+                        Adele
+                    </p>
+                </div>
+            </button>
+
+            <button class="catalog__item track " data-track="audio/Tom Odell - Can't Pretend.mp3">
+                <div class="track__img-wrap">
+                    <img class="track__poster" src="img/Foto_7.jpg" alt="Can't Pretend - Tom Odell" width="180"
+                        height="180">
+                </div>
+                <div class="track__info track-info">
+                    <p class="track__info__title">
+                        Can't Pretend
+                    </p>
+                    <p class="track__info__artist">
+                        Tom Odell
+                    </p>
+                </div>
+            </button>
+
+            <button class="catalog__item track " data-track="audio/Lana Del Rey - Young And Beautiful.mp3">
+                <div class="track__img-wrap">
+                    <img class="track__poster" src="img/Foto_8.jpg" alt="Young and Beautiful - Lana Del Rey" width="180"
+                        height="180">
+                </div>
+                <div class="track__info track-info">
+                    <p class="track__info__title">
+                        Young and Beautiful
+                    </p>
+                    <p class="track__info__artist">
+                        Lana Del Rey
+                    </p>
+                </div>
+            </button>
+
+            <button class="catalog__item track " data-track="audio/Adele - Someone Like You.mp3">
+                <div class="track__img-wrap">
+                    <img class="track__poster" src="img/Foto_9.jpg" alt="Someone Like You - Adele" width="180"
+                        height="180">
+                </div>
+                <div class="track__info track-info">
+                    <p class="track__info__title">
+                        Someone Like You
+                    </p>
+                    <p class="track__info__artist">
+                        Adele
+                    </p>
+                </div>
+            </button>
+
+            <button class="catalog__item track" data-track="audio/Imagine Dragons - Natural.mp3">
+                <div class="track__img-wrap">
+                    <img class="track__poster" src="img/Foto_10.jpg" alt="Natural - Imagine Dragons" width="180"
+                        height="180">
+                </div>
+                <div class="track__info track-info">
+                    <p class="track__info__title">
+                        Natural
+                    </p>
+                    <p class="track__info__artist">
+                        Imagine Dragons
+                    </p>
+                </div>
+            </button>
+
+            <button class="catalog__item track" data-track="audio/Drake - Laugh Now Cry Later.mp3">
+                <div class="track__img-wrap">
+                    <img class="track__poster" src="img/Foto_11.jpg" alt="Laugh now cry later - Drake" width="180"
+                        height="180">
+                </div>
+                <div class="track__info track-info">
+                    <p class="track__info__title">
+                        Laugh now cry later
+                    </p>
+                    <p class="track__info__artist">
+                        Drake
+                    </p>
+                </div>
+            </button>
+
+            <button class="catalog__item track" data-track="audio/Madonna - Frozen.mp3">
+                <div class="track__img-wrap">
+                    <img class="track__poster" src="img/Foto_12.jpg" alt="Frozen -  Madonna" width="180" height="180">
+                </div>
+                <div class="track__info track-info">
+                    <p class="track__info__title">
+                        Frozen
+                    </p>
+                    <p class="track__info__artist">
+                        Madonna
+                    </p>
+                </div>
+            </button>
+
+            <button class="catalog__btn-add">
+                <span>Увидеть все</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.59 16.59L13.17 12L8.59 7.41L10 6L16 12L10 18L8.59 16.59Z">
+                </svg>
+            </button>
+        </div>
+    </section>
+    <!-- catalog end -->
+
+    <!-- player start -->
+    <section class="player">
+        <h2 class="visually-hidden">Плеер</h2>
+
+        <div class="player__container">
+            <div class="player__track-info track-info_mobile-center">
+                <p class="track-info__title">
+                    Save your tears
+                </p>
+                <p class="track-info__artist">
+                    The weeknd
+                </p>
+            </div>
+
+            <div class="player__controller">
+                <button class="player__icon player__icon_stop player__controller-stop"></button>
+                <button class="player__icon player__icon_prev player__controller-prev"></button>
+                <button class="player__icon player__icon_pause player__controller-pause"></button>
+                <button class="player__icon player__icon_next player__controller-next"></button>
+                <button class="player__icon player__icon_like player__controller-like"></button>
+            </div>
+
+            <div class="player__progress-wrap">
+                <div class="player__progress">
+                    <input class="player__progress-input" type="range" min="0" max="1000" value="0">
+                </div>
+
+                <p class="player__time">
+                    <span class="player__time-passed">0.24</span>
+                    <span>/</span>
+                    <span class="player__time-total">4.31</span>
+                </p>
+            </div>
+
+            <div class="player__volume-wrap">
+                <div class="player__volume">
+                    <input class="player__volume-input" type="range" min="0" max="100" value="50">
+                </div>
+
+                <button class="player__icon player__icon_mute player__controller-mute"></button>
+            </div>
+        </div>
+    </section>
+    <!-- player end -->
+</body>
+
+</html>
