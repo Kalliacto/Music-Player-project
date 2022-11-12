@@ -1,7 +1,7 @@
 // const API_URL = 'http://localhost:3024/';
 
 // let dataMusic = [];
-const dataMusic = [
+let dataMusic = [
     {
         id: '1',
         artist: 'The weeknd',
@@ -170,6 +170,8 @@ const playerVolumeInput = document.querySelector('.player__volume-input');
 
 const trackTitle = document.querySelector('.track-info__title');
 const trackArtist = document.querySelector('.track-info__artist');
+//-------------------------------------------------------------------------
+
 
 //-------------------------------------------------------------------------
 // Создаем элемент кнопка Увидеть все
@@ -297,18 +299,35 @@ const createCard = (data) => {
             `;
 
     return card;
+
 };
 
 //-------------------------------------------------------------------------
+const shuffle = (array) => {
+    const newArray = [...array];
+    for (let i = newArray.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+    }
+    return newArray;
+};
 
-//-------------------------------------------------------------------------
 const renderCatalog = (dataList) => {
     playlist = [...dataList];
+    playlist = shuffle(playlist);
     catalogContainer.textContent = '';
     const listCards = dataList.map(createCard);
     catalogContainer.append(...listCards);
     addHandlerTrack();
 };
+//-------------------------------------------------------------------------
+// const renderCatalog = (dataList) => {
+//     playlist = [...dataList];
+//     catalogContainer.textContent = '';
+//     const listCards = dataList.map(createCard);
+//     catalogContainer.append(...listCards);
+//     addHandlerTrack();
+// };
 //-------------------------------------------------------------------------
 const checkCount = (i = 1) => {
     tracksCard[0];
@@ -348,6 +367,7 @@ const init = async () => {
 
     // dataMusic = await fetch(`${API_URL}api/music`).then((data) => data.json());
 
+    dataMusic = shuffle(dataMusic);
     renderCatalog(dataMusic);
     checkCount();
 
@@ -374,7 +394,8 @@ const init = async () => {
     })
 
     favoritBtn.addEventListener('click', () => {
-        const data = dataMusic.filter((item) => favoriteList.includes(item.id));
+        let data = dataMusic.filter((item) => favoriteList.includes(item.id));
+        data = shuffle(data);
         renderCatalog(data);
         checkCount();
     });
@@ -385,7 +406,7 @@ const init = async () => {
     });
 
     likeBtn.addEventListener('click', () => {
-        const index = favoriteList.indexOf(likeBtn.dataset.idTrack);
+        let index = favoriteList.indexOf(likeBtn.dataset.idTrack);
         if (index === -1) {
             favoriteList.push(likeBtn.dataset.idTrack);
             likeBtn.classList.add('player__icon_like_active');
