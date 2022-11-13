@@ -171,7 +171,8 @@ const playerVolumeInput = document.querySelector('.player__volume-input');
 const trackTitle = document.querySelector('.track-info__title');
 const trackArtist = document.querySelector('.track-info__artist');
 //-------------------------------------------------------------------------
-
+let searchBtn = document.querySelector('.search__btn');
+let searchInput = document.querySelector('.search__input');
 
 //-------------------------------------------------------------------------
 // Создаем элемент кнопка Увидеть все
@@ -357,10 +358,6 @@ const updateTime = () => {
     playerTimeDuration.textContent = `${minutesDuration}:${secondsDuration < 10 ? '0' + secondsDuration : secondsDuration}`;
 };
 //-------------------------------------------------------------------------
-
-
-
-//-------------------------------------------------------------------------
 const init = async () => {
     localStorage.setItem('volume', audio.volume) || 1;
     playerVolumeInput.value = audio.volume * 100;
@@ -434,7 +431,7 @@ const init = async () => {
             playerVolumeInput.value = audio.volume * 100;
         }
     });
-
+    //------------------------Поиск через API-------------------------------------------------
     // search.addEventListener('submit', async (event) => {
     //     event.preventDefault();
 
@@ -444,7 +441,20 @@ const init = async () => {
     //     checkCount();
 
     // });
-
+    //-------------------------Поиск------------------------------------------------
+    searchBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        //     let test = dataMusic.filter(
+        //         item => item.track.includes(searchInput.value) || item.artist.includes(searchInput.value));
+        //     console.log(test);
+        //     renderCatalog(test);
+        // });
+        let value = searchInput.value.toLowerCase();
+        let test = dataMusic.filter(
+            item => item.track.toLowerCase().includes(value) || item.artist.toLowerCase().includes(value));
+        console.log(test);
+        renderCatalog(test);
+    });
 };
 
 init();
