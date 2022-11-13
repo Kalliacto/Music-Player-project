@@ -58,6 +58,16 @@
     line-height: 0;
 }
 
+.close__btn {
+    position: absolute;
+    right: 45px;
+    /* top: 20%;
+    или */
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 0;
+}
+
 .header__favorit-btn {
     color: white;
 }

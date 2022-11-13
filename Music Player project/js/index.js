@@ -271,7 +271,7 @@ stopBtn.addEventListener('click', () => {
     audio.src = '';
     player.classList.remove('player_active');
 
-    document.querySelector('.track__active').classList.remove('track__active');
+    document.querySelector('.track_active').classList.remove('track_active');
 });
 //-------------------------------------------------------------------------
 const createCard = (data) => {

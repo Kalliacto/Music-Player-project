@@ -89,7 +89,6 @@
 .track:focus .track__img-wrap::after {
     opacity: 1;
     transform: translate(-50%, -50%) rotateY(0);
-
 }
 
 .track:active .track__img-wrap::after {
@@ -97,9 +96,10 @@
     opacity: 1;
 }
 
-.track__active:hover {
+.track_active {
     background-color: rgba(255, 255, 255, 0.8);
 }
+
 
 .track_active .track__img-wrap::after {
     transform: translate(-50%, -50%) rotateY(0);
