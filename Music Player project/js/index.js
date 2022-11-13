@@ -450,10 +450,13 @@ const init = async () => {
         //     renderCatalog(test);
         // });
         let value = searchInput.value.toLowerCase();
-        let test = dataMusic.filter(
-            item => item.track.toLowerCase().includes(value) || item.artist.toLowerCase().includes(value));
-        console.log(test);
-        renderCatalog(test);
+        if (value.length < 3) {
+            alert('Для поиска вы должны ввести три или более символов');
+        } else if (value.length >= 3) {
+            let test = dataMusic.filter(
+                item => item.track.toLowerCase().includes(value) || item.artist.toLowerCase().includes(value));
+            renderCatalog(test);
+        }
     });
 };
 
